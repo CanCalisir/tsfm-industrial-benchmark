@@ -13,5 +13,5 @@ This repository contains the supplementary data, experimental results, and hyper
 ## 1. Experimental Results
 The complete numerical results (MAE) for all models and baselines across all experimental settings (Zero-shot, Linear Probing, Fine-tuning) are available in the `results/` folder.
 
-* [Download Full Results (Excel)](results/full_results_mae.xlsx)
+* [Download Full Results (Excel)](results/)
 * [View Model Parameter Counts](results/model_sizes.xlsx)
