@@ -35,13 +35,40 @@ We evaluate two datasets representing distinct industrial regimes.
 
 ### A. Steel Industry Energy Consumption
 * **Regime:** Structured, Pattern-Driven
-* **Characteristics:** High regularity with strong daily and weekly seasonality.
-* **Resolution:** 15-minute intervals.
+* **Target Variable:** **Energy Consumption [kWh]** 
+    * *Description:* The total energy usage of the plant, aggregated every 15 minutes.
+    * *Characteristics:* High regularity with strong daily and weekly seasonality.
+* **Known Covariates:** **Temporal Features** 
+    * *Details:* Cyclic sine/cosine encodings of "hour-of-day" and "day-of-week."
+    * *Role:* These capture the strong daily and weekly operational schedules driving consumption.
+* **Preprocessing (Sliding Window):**
+    * **Window Length:** 512 time steps
+    * **Forecast Horizon:** 96 time steps (1 day)
+    * **Stride:** 96 time steps
+* **Data Split (Chronological):**
+    * **Training:** January – August
+    * **Test:** September – October
+    * **Validation:** November – December
 * **Insight:** This dataset represents a classic forecasting task where historical patterns strongly predict future values, favoring models that capture long-term dependencies.
 
 
 ### B. CNC Milling Spindle Current
 * **Regime:** Highly Dynamic, Control-Based
-* **Characteristics:** Non-stationary and irregular. The target variable (current) is driven by machine control commands rather than historical seasonality.
-* **Resolution:** 10 Hz (High Frequency).
-* **Insight:** This dataset represents a "dynamic" task where the target variable changes largely due to external control signals (covariates), making it difficult for models to predict based on history alone.
+* **Target Variable:** **Spindle Current Feedback [A]** 
+    * *Description:* A proxy for tool load and wear, sampled at 10 Hz.
+    * *Characteristics:* Non-stationary and irregular. The target variable is driven by machine control commands rather than historical seasonality.
+* **Past Covariates:** **Physical Observations**
+    * *Details:* Actual velocities and accelerations measured during the process.
+* **Known Covariates:** **Control Parameters** 
+    * *Details:* Planned velocities, planned accelerations, feed rate, and clamp pressure.
+    * *Role:* These are the commands sent to the machine, which dictate the load on the spindle *before* it happens.
+* **Preprocessing (Sliding Window):**
+    * **Window Length:** 512 time steps
+    * **Forecast Horizon:** 50 time steps
+    * **Stride:** 50 time steps
+* **Data Split (Experiment-Based):**
+    * **Training:** Experiments 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14
+    * **Validation:** Experiments 11, 12, 15
+    * **Test:** Experiments 16, 17, 18
+    * *Note:* The split ensures that training, validation, and test sets are representative of the different process configurations
+* **Insight:** This dataset represents a dynamic task where the target variable changes largely due to external control signals, making it difficult for models to predict based on history alone.
