@@ -36,7 +36,7 @@ We evaluate two datasets representing distinct industrial regimes.
 ### A. Steel Industry Energy Consumption
 * **Regime:** Structured, Pattern-Driven
 * **Target Variable:** **Energy Consumption [kWh]** 
-    * *Description:* The total energy usage of the plant, aggregated every 15 minutes.
+    * *Description:* The total energy usage of the plant over a year, aggregated every 15 minutes.
     * *Characteristics:* High regularity with strong daily and weekly seasonality.
 * **Known Covariates:** **Temporal Features** 
     * *Details:* Cyclic sine/cosine encodings of "hour-of-day" and "day-of-week."
