@@ -38,6 +38,10 @@ We evaluate two datasets representing distinct industrial regimes.
 * **Target Variable:** **Energy Consumption [kWh]** 
     * *Description:* The total energy usage of the plant over a year, aggregated every 15 minutes.
     * *Characteristics:* High regularity with strong daily and weekly seasonality.
+      
+ ![Steel Industry Energy Consumption Plot](target-variables/steel_target_variable.png)
+    *(Figure: Energy consumption of two weeks, showing daily seasonality)*
+    
 * **Known Covariates:** **Temporal Features** 
     * *Details:* Cyclic sine/cosine encodings of "hour-of-day" and "day-of-week."
     * *Role:* These capture the strong daily and weekly operational schedules driving consumption.
@@ -57,6 +61,10 @@ We evaluate two datasets representing distinct industrial regimes.
 * **Target Variable:** **Spindle Current Feedback [A]** 
     * *Description:* A proxy for tool load and wear, sampled at 10 Hz.
     * *Characteristics:* Non-stationary and irregular. The target variable is driven by machine control commands rather than historical seasonality.
+ 
+    ![CNC Milling Spindle Current Plot](target-variables/cnc_target_variable.png)
+    *(Figure: Spindle current feedback during a single milling cycle.)*
+
 * **Past Covariates:** **Physical Observations**
     * *Details:* Actual velocities and accelerations measured during the process.
 * **Known Covariates:** **Control Parameters** 
