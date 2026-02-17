@@ -61,8 +61,8 @@ We evaluate two datasets representing distinct industrial regimes.
 * **Target Variable:** **Spindle Current Feedback [A]** 
     * *Description:* A proxy for tool load and wear, sampled at 10 Hz.
     * *Characteristics:* Non-stationary and irregular. The target variable is driven by machine control commands rather than historical seasonality.
- 
-    ![CNC Milling Spindle Current Plot](target-variables/cnc_target_variable.png)
+
+![CNC Milling Spindle Current Plot](target-variables/cnc_target_variable.png)
     *(Figure: Spindle current feedback during a single milling cycle.)*
 
 * **Past Covariates:** **Physical Observations**
