@@ -29,7 +29,7 @@ Large-scale, pre-trained foundation models have recently been introduced for tim
 We evaluate the Zero-Shot, Linear Probing, and Fine-Tuning performance of Foundation Models against Classical Baselines.
 
 <p align="center">
-  <img src="results/fig_final_results.png" width="100%">
+  <img src="results/fig_final_results.png" width="70%">
   <br>
   <em>(Figure 1: Results for the steel (top left) and CNC (bottom) dataset by input features. Comparison by MAE, lower is better. Color encodes model family, patterns training strategies and overall sorting is based on performance. Dashed blue line is mean-predictor performance for reference. The top right panel reports the number of parameters (log scale) for the models)</em>
 </p>
@@ -49,7 +49,7 @@ We evaluate two datasets representing distinct industrial regimes.
     * *Characteristics:* High regularity with strong daily and weekly seasonality.
 
  <p align="center">
-  <img src="target-variables/steel_target_variable.png" width="80%">
+  <img src="target-variables/steel_target_variable.png" width="70%">
   <br>
   <em>(Figure 2: Representative two-week segment of energy consumption, highlighting the strong daily and weekly seasonality)</em>
 </p>
@@ -75,7 +75,7 @@ We evaluate two datasets representing distinct industrial regimes.
     * *Characteristics:* Non-stationary and irregular. The target variable is driven by machine control commands rather than historical seasonality.
 
 <p align="center">
-  <img src="target-variables/cnc_target_variable.png" width="80%">
+  <img src="target-variables/cnc_target_variable.png" width="70%">
   <br>
   <em>(Figure 3: Representative segment of Spindle Current Feedback)</em>
 </p>
