@@ -25,7 +25,16 @@ Large-scale, pre-trained foundation models have recently been introduced for tim
 </details>
 
 ## 1. Experimental Results
-The complete numerical results (MAE) for all models and baselines across all experimental settings (Zero-shot, Linear Probing, Fine-tuning) are available in the `results/` folder.
+
+We evaluate the Zero-Shot, Linear Probing, and Fine-Tuning performance of Foundation Models against Classical Baselines.
+
+<p align="center">
+  <img src="results/fig_final_results.png" width="100%">
+  <br>
+  <em>(Figure 1: Results for the steel (top left) and CNC (bottom) dataset by input features. Comparison by MAE, lower is better. Color encodes model family, patterns training strategies and overall sorting is based on performance. Dashed blue line is mean-predictor performance for reference. The top right panel reports the number of parameters (log scale) for the models)</em>
+</p>
+
+The complete numerical results (MAE) for all models and baselines across all experimental settings are available in the `results/` folder.
 
 * [Download Full Results (Excel)](results/)
 * [View Model Parameter Counts](results/model_sizes.xlsx)
@@ -38,9 +47,12 @@ We evaluate two datasets representing distinct industrial regimes.
 * **Target Variable:** **Energy Consumption [kWh]** 
     * *Description:* The total energy usage of the plant over a year, aggregated every 15 minutes.
     * *Characteristics:* High regularity with strong daily and weekly seasonality.
-      
- ![Steel Industry Energy Consumption Plot](target-variables/steel_target_variable.png)
-    *(Figure: Energy consumption of two weeks, showing daily seasonality)*
+
+ <p align="center">
+  <img src="target-variables/steel_target_variable.png" width="80%">
+  <br>
+  <em>(Figure 2: Representative two-week segment of energy consumption, highlighting the strong daily and weekly seasonality)</em>
+</p>
     
 * **Known Covariates:** **Temporal Features** 
     * *Details:* Cyclic sine/cosine encodings of "hour-of-day" and "day-of-week."
@@ -62,8 +74,11 @@ We evaluate two datasets representing distinct industrial regimes.
     * *Description:* A proxy for tool load and wear, sampled at 10 Hz.
     * *Characteristics:* Non-stationary and irregular. The target variable is driven by machine control commands rather than historical seasonality.
 
-![CNC Milling Spindle Current Plot](target-variables/cnc_target_variable.png)
-    *(Figure: Spindle current feedback during a single milling cycle.)*
+<p align="center">
+  <img src="target-variables/cnc_target_variable.png" width="80%">
+  <br>
+  <em>(Figure 3: Representative segment of Spindle Current Feedback)</em>
+</p>
 
 * **Past Covariates:** **Physical Observations**
     * *Details:* Actual velocities and accelerations measured during the process.
