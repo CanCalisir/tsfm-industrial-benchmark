@@ -30,7 +30,7 @@ Large-scale, pre-trained foundation models have recently been introduced for tim
 We evaluate the Zero-Shot, Linear Probing, and Fine-Tuning performance of Foundation Models against Classical Baselines.
 
 <p align="center">
-  <img src="results/fig_final_results.png" width="75%">
+  <img src="results/fig_final_results.png" width="80%">
   <br>
   <em>(Figure 1: Results for the steel (top left) and CNC (bottom) dataset by input features. Comparison by MAE, lower is better. Color encodes model family, patterns training strategies and overall sorting is based on performance. Dashed blue line is mean-predictor performance for reference. The top right panel reports the number of parameters (log scale) for the models)</em>
 </p>
