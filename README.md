@@ -12,7 +12,8 @@ This repository contains the supplementary data, experimental results, and hyper
 
 
 ## 📌  Summary
-We benchmark three open-source Time-Series Foundation Models (Chronos 2, MOMENT, GTT) against classical baselines on real-world **Steel** (energy consumption) and **CNC** (milling tool wear) datasets.
+
+We benchmark three open-source Time-Series Foundation Models (Chronos 2, MOMENT, GTT) against classical baselines on **time-series forecasting tasks** using real-world **Steel** (energy consumption) and **CNC** (milling tool wear) datasets.
 
 **Key Finding:** TSFMs consistently outperform baselines in pattern-heavy tasks (Steel) but trail behind simple regressors in dynamic, control-based environments (CNC) where domain-specific covariates are essential.
 
