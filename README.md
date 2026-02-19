@@ -96,3 +96,12 @@ We evaluate two datasets representing distinct industrial regimes.
     * **Test:** Experiments 16, 17, 18
     * *Note:* The split ensures that training, validation, and test sets are representative of the different process configurations
 * **Insight:** This dataset represents a dynamic task where the target variable changes largely due to external control signals, making it difficult for models to predict based on history alone.
+
+## 4. Hyperparameters
+
+A core focus of this paper is evaluating whether massive, generalized Foundation Models inherently outperform smaller, highly specialized models on specific industrial tasks. To ensure transparency and reproducibility, we have documented the architectures, parameter counts, and training configurations for the models evaluated.
+
+Detailed specifications can be found in the dedicated configuration files below:
+
+* **[Baselines](hyperparameters/baselines.md)**
+* **[Time-Series Foundation Models](hyperparameters/foundation_models.md)**
