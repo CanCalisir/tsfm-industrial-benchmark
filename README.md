@@ -40,7 +40,7 @@ The complete numerical results (MAE) for all models and baselines across all exp
 * [Download Full Results (Excel)](results/)
 * [View Model Parameter Counts](results/model_sizes.xlsx)
 
-## 2. Target Variable Analysis
+## 2. Target Variable Analysis & Preprocessing
 We evaluate two datasets representing distinct industrial regimes.
 
 ### A. Steel Industry Energy Consumption
