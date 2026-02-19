@@ -35,7 +35,8 @@ This document details the hyperparameters used for the baseline models (AutoARIM
   * `batch_size`: 256
   * `learning_rate`: 1e-3
   * `optimizer`: AdamW (`weight_decay=1e-4`)
-  * `scheduler`: ReduceLROnPlateau (`factor=0.5`, `patience=3`)
+  * `scheduler`: ReduceLROnPlateau (`factor=0.5`, `patience=5`)
+  * `early_stopping`: patience=10 (stops if validation loss fails to improve for 10 total epochs)
   * `loss`: L1Loss (MAE)
 
 ## 4. DLinear
