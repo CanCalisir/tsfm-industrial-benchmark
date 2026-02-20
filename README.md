@@ -86,7 +86,10 @@ We evaluate two datasets representing distinct industrial regimes.
 * **Known Covariates:** **Control Parameters** 
     * *Details:* Planned velocities, planned accelerations, feed rate, and clamp pressure.
     * *Role:* These are the commands sent to the machine, which dictate the load on the spindle *before* it happens.
-* **Preprocessing (Sliding Window):**
+* **Preprocessing**
+  * **Phase Filtering:** Dropped specific transitional phases from the `Machining_Process` log (`"Starting"`, `"Prep"`, `"End"`, and `"end"`).
+    * These correspond to non-cutting operations (e.g., preparation, tracing up and down the "S" curve involving different layers, and repositioning the spindle as it moves through the air to a starting point). Removing them successfully isolates the active material-cutting process.
+  * **Sliding Window Strategy:**
     * **Window Length:** 512 time steps
     * **Forecast Horizon:** 50 time steps
     * **Stride:** 50 time steps
