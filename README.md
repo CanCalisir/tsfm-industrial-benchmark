@@ -108,3 +108,31 @@ Detailed specifications can be found in the dedicated configuration files below:
 
 * **[Baselines](hyperparameters/baselines.md)**
 * **[Time-Series Foundation Models](hyperparameters/foundation_models.md)**
+
+## 📄 Citation
+
+If you find this repository or our comparative findings useful in your research, please consider citing our work:
+
+```bibtex
+@inproceedings{can2026tsfm,
+  title     = {A comparison of open time-series foundation models for industrial manufacturing applications},
+  author    = {Can Calisir and Simon Leszek},
+  booktitle = {Proceedings of the 34th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning (ESANN)},
+  year      = {2026},
+  publisher = {},
+  url       = {}
+}
+```
+
+## 📚 References & Acknowledgements
+
+This repository builds upon open-source time-series models, and public datasets. We would like to acknowledge the following works:
+
+### 🧠 Models
+* **Chronos-2:** Ansari, A. F., et al. "Chronos-2: From Univariate to Universal Forecasting." (2025). [arXiv:2510.15821](https://arxiv.org/abs/2510.15821) | [GitHub](https://github.com/amazon-science/chronos-forecasting)
+* **MOMENT:** Goswami, M., Szafer, K., Choudhry, A., Cai, Y., Li, S., & Dubrawski, A. (2024). "MOMENT: A Family of Open Time-series Foundation Models." *International Conference on Machine Learning (ICML)*. [arXiv:2402.03885](https://arxiv.org/abs/2402.03885) | [GitHub](https://github.com/moment-timeseries-foundation-model/moment)
+* **GTT:** Feng, C., Huang, L., & Krompass, D. (2024). "General Time Transformer: an Encoder-only Foundation Model for Zero-Shot Multivariate Time Series Forecasting." *Proceedings of the 33rd ACM International Conference on Information and Knowledge Management (CIKM '24)*, 3757–3761. [DOI: 10.1145/3627673.3679931](https://doi.org/10.1145/3627673.3679931) | [GitHub](https://github.com/cfeng783/GTT)
+
+### 📊 Datasets
+* **Steel Industry Energy Consumption:** V E, Sathishkumar, Shin, Changsun, & Cho, Yongyun. (2021). *Steel Industry Energy Consumption Dataset*. UCI Machine Learning Repository. [DOI: 10.24432/C52G8C](https://doi.org/10.24432/C52G8C)
+* **CNC Milling Spindle Current:** System-level Manufacturing and Automation Research Testbed (SMART) at the University of Michigan. (2018). *Tool Wear Detection in CNC Mill Dataset*. Kaggle. [Dataset Link](https://www.kaggle.com/datasets/shasun/tool-wear-detection-in-cnc-mill)
