@@ -13,9 +13,9 @@ This repository contains the supplementary data, experimental results, and hyper
 
 ## 📌  Summary
 
-We benchmark three open-source Time-Series Foundation Models (Chronos 2, MOMENT, GTT) against classical baselines on **time-series forecasting tasks** using real-world **Steel** (energy consumption) and **CNC** (milling tool wear) datasets.
+We benchmark three open-source time-series foundation models (Chronos 2, MOMENT, GTT) against classical baselines on **time-series forecasting tasks** using real-world **steel** (energy consumption) and **CNC** (milling tool wear) datasets.
 
-**Key Finding:** TSFMs consistently outperform baselines in pattern-heavy tasks (Steel) but trail behind simple regressors in dynamic, control-based environments (CNC) where domain-specific covariates are essential.
+**Key Finding:** TSFMs consistently outperform baselines in pattern-heavy tasks (steel) but trail behind simple regressors in dynamic, control-based environments (CNC) where domain-specific covariates are essential.
 
 ---
 
@@ -27,7 +27,7 @@ Large-scale, pre-trained foundation models have recently been introduced for tim
 
 ## 1. Experimental Results
 
-We evaluate the Zero-Shot, Linear Probing, and Fine-Tuning performance of Foundation Models against Classical Baselines.
+We evaluate the zero-shot, linear probing, and fine-tuning performance of foundation models against classical baselines.
 
 <p align="center">
   <img src="results/fig_final_results.png" width="80%">
@@ -102,7 +102,7 @@ We evaluate two datasets representing distinct industrial regimes.
 
 ## 4. Hyperparameters
 
-A core focus of this paper is evaluating whether massive, generalized Foundation Models inherently outperform smaller, highly specialized models on specific industrial tasks. To ensure transparency and reproducibility, we have documented the architectures, parameter counts, and training configurations for the models evaluated.
+A core focus of this paper is evaluating whether massive, generalized foundation models inherently outperform smaller, highly specialized models on specific industrial tasks. To ensure transparency and reproducibility, we have documented the architectures, parameter counts, and training configurations for the models evaluated.
 
 Detailed specifications can be found in the dedicated configuration files below:
 
