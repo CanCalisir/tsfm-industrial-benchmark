@@ -7,6 +7,7 @@ This document details the hyperparameters used for the foundation models (Chrono
 
 ## 1. Chronos 2
 
+* **Creator:** Amazon Web Services (AWS)
 * **Architecture:** T5-family language model adapted for universal time series forecasting.
 * **Variant Used:** Chronos-2 Base (~120M parameters)
 * **Execution Mode Evaluated:** Full Fine-Tuning (All model weights unfrozen and updated).
