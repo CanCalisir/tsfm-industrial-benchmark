@@ -8,7 +8,7 @@ This repository contains the supplementary data, experimental results, and hyper
 > 
 > *Authors: Can Calisir, Simon Leszek*
 > 
-> *Conference: ESANN 2025*
+> *Conference: ESANN 2026*
 
 
 ## 📌  Summary
