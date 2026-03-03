@@ -33,7 +33,6 @@ This document details the hyperparameters used for the foundation models (Chrono
   * `learning rate`: 1e-4
   * `loss function`: MAE (Mean Absolute Error)
   * `batch size`: 256
-  * `early stopping`: Patience = 5 epochs (monitoring Validation Loss)
 
 ### B. Full Fine-Tuning Configuration
 * **Strategy:** Unfrozen Encoder. Both the Transformer Encoder and the final projection head are trainable. (RevIN remains frozen).
@@ -42,7 +41,6 @@ This document details the hyperparameters used for the foundation models (Chrono
   * `learning rate`: 1e-5 (Lower learning rate utilized to preserve pre-trained backbone features)
   * `loss function`: MAE (Mean Absolute Error)
   * `batch size`: 256
-  * `early stopping`: Patience = 5 epochs (monitoring Validation Loss)
 
 ## 3. MOMENT
 
@@ -63,7 +61,7 @@ This document details the hyperparameters used for the foundation models (Chrono
   * `optimizer`: Adam
   * `learning_rate`: 1e-4
 
-### Full Fine-Tuning Configuration
+### B. Full Fine-Tuning Configuration
 * **Strategy:** All model weights are updated. Differential learning rates are applied to preserve pre-trained structural knowledge while adapting the final forecasting head.
 * **Model Configuration:**
   * `freeze_encoder`: False
