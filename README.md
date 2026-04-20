@@ -100,6 +100,45 @@ We evaluate two datasets representing distinct industrial regimes.
     * *Note:* The split ensures that training, validation, and test sets are representative of the different process configurations
 * **Insight:** This dataset represents a dynamic task where the target variable changes largely due to external control signals, making it difficult for models to predict based on history alone.
 
+## 3. Preprocessed Datasets
+
+To ensure reproducibility across all baselines and foundation models, the sliding window preprocessing detailed above was applied prior to training, and the resulting structured datasets are available in the [`data/`](data/) directory.
+
+### 📦 Data Format
+The data is stored in a tabular (flat) format, but it already reflects the sliding window preprocessing used in our experiments. Each row contains:
+* **`item_id`** → Identifies a specific window
+* **`timestamp`** → Time index within the window
+* **Target + Covariates** → Feature values
+
+### 🔁 Sliding Window Interpretation
+Although the data is tabular, it is not raw time series data. 
+* Each unique `item_id` corresponds to **one sliding window**.
+* Each window has a fixed length of:
+  * **Steel:** 512 (input) + 96 (forecast horizon)
+  * **CNC:** 512 (input) + 50 (forecast horizon)
+
+For each window:
+* The first part is the model **input (context)**.
+* The last part is the **prediction target (forecast horizon)**.
+
+### ⚠️ Important Notes
+* The sliding window preprocessing is **already applied**.
+* No additional windowing is performed during training or evaluation.
+* The provided splits (train, val, test) are fixed and should not be modified to ensure comparable results.
+
+If you want to:
+* Change the window size
+* Change the stride (e.g., use `stride = 1`)
+* Apply a different preprocessing strategy
+
+**👉 You need to recreate the dataset from the raw data.**
+
+### 🎯 Evaluation Protocol
+Evaluation is performed:
+* On the **test split only**.
+* By predicting the forecast horizon of each window.
+* And averaging the error (e.g., MAE) across all windows.
+
 ## 4. Hyperparameters
 
 A core focus of this paper is evaluating whether massive, generalized foundation models inherently outperform smaller, highly specialized models on specific industrial tasks. To ensure transparency and reproducibility, we have documented the architectures, parameter counts, and training configurations for the models evaluated.
@@ -136,3 +175,6 @@ This repository builds upon open-source time-series models, and public datasets.
 ### 📊 Datasets
 * **Steel Industry Energy Consumption:** V E, Sathishkumar, Shin, Changsun, & Cho, Yongyun. (2021). *Steel Industry Energy Consumption Dataset*. UCI Machine Learning Repository. [DOI: 10.24432/C52G8C](https://doi.org/10.24432/C52G8C)
 * **CNC Milling Spindle Current:** System-level Manufacturing and Automation Research Testbed (SMART) at the University of Michigan. (2018). *Tool Wear Detection in CNC Mill Dataset*. Kaggle. [Dataset Link](https://www.kaggle.com/datasets/shasun/tool-wear-detection-in-cnc-mill)
+
+### 🏛️ Funding
+This research is funded by the **German Federal Ministry for Research, Technology and Space** through project **RIESIQ** (ref `16IS24087A`).
