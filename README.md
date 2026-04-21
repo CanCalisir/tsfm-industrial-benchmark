@@ -153,13 +153,15 @@ Detailed specifications can be found in the dedicated configuration files below:
 If you find this repository or our comparative findings useful in your research, please consider citing our work:
 
 ```bibtex
-@inproceedings{can2026tsfm,
+@inproceedings{calisir2026tsfm,
   title     = {A comparison of open time-series foundation models for industrial manufacturing applications},
-  author    = {Can Calisir and Simon Leszek},
+  author    = {Calisir, Can and Leszek, Simon},
   booktitle = {Proceedings of the 34th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning (ESANN)},
   year      = {2026},
-  publisher = {},
-  url       = {}
+  month     = {01},
+  pages     = {305--310},
+  doi       = {10.14428/esann/2026.ES2026-310},
+  url       = {https://doi.org/10.14428/esann/2026.ES2026-310}
 }
 ```
 
